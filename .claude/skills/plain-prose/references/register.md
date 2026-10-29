@@ -32,9 +32,9 @@ Plain declarative sentences addressed to *you*, in the present tense and active 
 
 A sentence starts with its subject or with a short framing clause, and then makes one point. Common openers: *The* ..., *If you* ..., *To* [do X], ..., *For* [more information / example] ..., *You* ..., *This* ..., *When* ..., *Because* ...
 
-Framing clauses come first and are short: *If you'd like to skip the oracle, run the engine with `--no-check`.* *Because the run is deterministic, the corpus stores inputs, not memory.*
+Framing clauses come first and are short: *If you'd like to skip the harness, run the engine with `--no-check`.* *Because the run is deterministic, the corpus stores inputs, not memory.*
 
-A long sentence is fine when the extra length is qualifiers, not extra ideas. *When the two engines diverge, the oracle reports the first input where they differ, the state fields that differ, and the random seed in each engine* is one idea. A sentence of the same length that splices three facts with two dashes is three ideas. Split the second kind. Leave the first.
+A long sentence is fine when the extra length is qualifiers, not extra ideas. *When the two engines diverge, the harness reports the first input where they differ, the state fields that differ, and the random seed in each engine* is one idea. A sentence of the same length that splices three facts with two dashes is three ideas. Split the second kind. Leave the first.
 
 Transitions to use: *also*, *instead*, *however*, *typically*, *for example*, *in that case*. Transitions to drop: *additionally*, *furthermore*, *moreover*, *importantly*, *crucially*, *notably*, *in other words*, *behind the scenes*, *under the hood*.
 
@@ -74,7 +74,7 @@ A conceptual page opens on the subject itself, states the concept in declarative
 
 ## Headings
 
-Sentence case. Verb first for task sections (*Build the engine*, *Replay a log*, *Run the oracle*), noun for concept sections (*Lockstep runs*, *Prerequisites*, *Next steps*). No emoji, no numbering, no colons.
+Sentence case. Verb first for task sections (*Build the engine*, *Replay a log*, *Run the harness*), noun for concept sections (*Lockstep runs*, *Prerequisites*, *Next steps*). No emoji, no numbering, no colons.
 
 ## What to keep from a model draft
 

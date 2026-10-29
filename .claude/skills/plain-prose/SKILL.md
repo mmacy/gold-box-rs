@@ -59,7 +59,7 @@ When you find UI strings in source, leave them as they are and list them when yo
 
 ## How far to go
 
-When you edit, there are two sizes of job, and the owner picks. Before you edit, ask, unless the request already says which. If your harness has a tool for questions, like `AskUserQuestion` in Claude Code, use it.
+When you edit, there are two sizes of job, and the owner picks. Before you edit, ask, unless the request already says which. If your agent harness has a tool for questions, like `AskUserQuestion` in Claude Code, use it.
 
 - "rewrite it" or "full rewrite" means a rewrite for the reader.
 - "in place", "keep the structure", or "just the wording" means an edit in place.
