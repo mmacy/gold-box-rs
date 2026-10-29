@@ -1,0 +1,10 @@
+# Game files, saves, and anything recorded from the original game stay local.
+/game/
+/local/
+*.[Dd][Aa][Xx]
+*.[Oo][Vv][Rr]
+*.[Ee][Xx][Ee]
+*.[Pp][Kk][Gg]
+*.[Pp][Dd][Ff]
+
+/target/

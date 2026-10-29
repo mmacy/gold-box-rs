@@ -1,0 +1,8 @@
+#!/bin/sh
+# Reject game data in any commit that this push would publish.
+root=$(git rev-parse --show-toplevel)
+zero=0000000000000000000000000000000000000000
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue
+  python3 "$root/tools/check_game_data.py" commits "$local_sha" --not --remotes || exit 1
+done
