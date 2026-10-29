@@ -34,7 +34,7 @@ A sentence starts with its subject or with a short framing clause, and then make
 
 Framing clauses come first and are short: *If you'd like to skip the oracle, run the engine with `--no-check`.* *Because the run is deterministic, the corpus stores inputs, not memory.*
 
-A long sentence is fine when the extra length is qualifiers, not extra ideas. *When a ported routine calls one that isn't verified yet, the harness supplies that call's recorded writes, its return value, and its change to the seed* is one idea. A sentence of the same length that splices three facts with two dashes is three ideas. Split the second kind. Leave the first.
+A long sentence is fine when the extra length is qualifiers, not extra ideas. *When the two engines diverge, the oracle reports the first input where they differ, the state fields that differ, and the random seed in each engine* is one idea. A sentence of the same length that splices three facts with two dashes is three ideas. Split the second kind. Leave the first.
 
 Transitions to use: *also*, *instead*, *however*, *typically*, *for example*, *in that case*. Transitions to drop: *additionally*, *furthermore*, *moreover*, *importantly*, *crucially*, *notably*, *in other words*, *behind the scenes*, *under the hood*.
 
@@ -42,7 +42,7 @@ Transitions to use: *also*, *instead*, *however*, *typically*, *for example*, *i
 
 - **Never open by describing the document.** No *This document explains*, *This README covers*, *In this guide, you'll learn*, *This section walks through*, or any variant. The title and the context already say what the reader is looking at. Delete the sentence. If it stated a fact the reader needs (a prerequisite, a scope limit), state the fact directly.
 - **Say the fact, not the evaluation.** No *simply*, *easily*, or *just* as minimizers. No adjectives whose only job is approval. Let the reader decide whether something is easy, simple, or good.
-- **State recommendations explicitly.** *We recommend ...*, *Don't ...*, *Always run the oracle before you merge a ported routine.* Not hedged, not implied.
+- **State recommendations explicitly.** *We recommend ...*, *Don't ...*, *Always run the lockstep tests before you merge a change to the rules.* Not hedged, not implied.
 - **State limits as limits.** *The engine loads saves **only** from Pools of Darkness.* *You **can't** replay a log from a save file.* Bold the operative word (*only*, *can't*, *not*), sparingly.
 - **Introduce a term once, in italics, then use it plainly.** Introduce an abbreviation in parentheses at first use: *Event Control Language (ECL)*.
 - **Use a fixed form for cross-references.** *For more information about X, see Y.* *To learn more about X, see Y.* Link text is the target's title, not "here" or "this page".
@@ -74,7 +74,7 @@ A conceptual page opens on the subject itself, states the concept in declarative
 
 ## Headings
 
-Sentence case. Verb first for task sections (*Build the engine*, *Replay a log*, *Run the oracle*), noun for concept sections (*Routine oracle*, *Prerequisites*, *Next steps*). No emoji, no numbering, no colons.
+Sentence case. Verb first for task sections (*Build the engine*, *Replay a log*, *Run the oracle*), noun for concept sections (*Lockstep runs*, *Prerequisites*, *Next steps*). No emoji, no numbering, no colons.
 
 ## What to keep from a model draft
 
@@ -82,6 +82,6 @@ Facts, code, commands, link targets, and any sentence that already reads like th
 
 ## Commit messages and PR descriptions
 
-These use a different register: first person, direct, short. In a commit message, say what changed and why, at a length that fits the change. In a PR description, say what changed, why, and what the reviewer should check. *I ported the ECL interpreter's jump opcodes. All 14 pass the oracle. Check the wrap in `op_jump_rel`, which the original does in 8 bits.* The docs numbers above (*you* at about 18 per thousand words, *I* at zero) don't apply here, and `check.py` isn't meant for these.
+These use a different register: first person, direct, short. In a commit message, say what changed and why, at a length that fits the change. In a PR description, say what changed, why, and what the reviewer should check. *I added the ECL interpreter's jump opcodes. All 14 pass in lockstep. Check the wrap in `op_jump_rel`, which the specification puts at 8 bits.* The docs numbers above (*you* at about 18 per thousand words, *I* at zero) don't apply here, and `check.py` isn't meant for these.
 
-Code comments are short statements of the code's intent, sometimes in the first person plural: *The original wraps here, so we keep the `u8` add.* *Always restore the seed, even when the routine fails.*
+Code comments are short statements of the code's intent, sometimes in the first person plural: *The specification wraps this value at 8 bits, so the add stays `u8`.* *Always restore the seed, even when the step fails.*
