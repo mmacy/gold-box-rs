@@ -1,0 +1,3 @@
+#!/bin/sh
+# Reject game data before it enters a commit.
+exec python3 "$(git rev-parse --show-toplevel)/tools/check_game_data.py" staged

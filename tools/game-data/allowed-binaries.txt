@@ -1,0 +1,2 @@
+# Binary files, and files larger than 1 MB, that the owner has checked contain no game data.
+# One line per file: its SHA-256 hash, two spaces, and its path in the repository.
