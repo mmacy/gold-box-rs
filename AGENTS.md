@@ -1,6 +1,18 @@
 # Agent guide
 
-`gold-box-rs` is a new engine for *Pools of Darkness*, written in Rust. A test harness checks it against the original game.
+`gold-box-rs` is a new engine for *Pools of Darkness*, written in Rust. A separate test harness, the *oracle*, checks it against the original game.
+
+## Clean room
+
+The engine is a clean-room reimplementation, and this repository is its implementation side. Write the engine only from these sources:
+
+- The specification in the private `gold-box-spec` repository.
+- The oracle's reports.
+- This repository and its dependencies.
+- Public references, like published descriptions of Turbo Pascal's random number generator and its 6-byte `Real` format.
+- The data files from the player's copy of the game, like the DAX archives.
+
+Never read `~/repos/goldbox`, the `gold-box-oracle` repository, disassembly or decompiled code of any Gold Box game, or the games' program files (the `.EXE`, `.COM`, `.OVR`, and `.DRV` files), and don't run the original game. When the specification doesn't answer a question, file the question in `gold-box-spec`.
 
 ## Writing
 
@@ -27,4 +39,4 @@ The pre-commit and pre-push hooks run `tools/check_game_data.py`, and so does th
 
 ## Licenses
 
-The repository is under CC0 1.0 Universal (`LICENSE`). A crate that links a copyleft library is under that library's license instead. The test harness links the Unicorn emulator, which is GPL-2.0, so the harness crate is GPL-2.0. The engine core and the browser app may depend only on crates under permissive licenses, like MIT, Apache-2.0, BSD, ISC, Zlib, and CC0.
+The repository is under CC0 1.0 Universal (`LICENSE`). The engine core and the browser app may depend only on crates under permissive licenses, like MIT, Apache-2.0, BSD, ISC, Zlib, and CC0.
