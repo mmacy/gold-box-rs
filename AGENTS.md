@@ -1,22 +1,22 @@
 # Agent guide
 
-`gold-box-rs` is a new engine for *Pools of Darkness*, written in Rust. A separate test harness, the *oracle*, checks it against the original game.
+`gold-box-rs` is a new engine for *Pools of Darkness*, written in Rust. A separate test harness, in the private `gold-box-harness` repository, checks it against the original game.
 
 ## Clean room
 
 The engine is a clean-room reimplementation, and this repository is its implementation side. Write the engine only from these sources:
 
 - The specification in the private `gold-box-spec` repository.
-- The oracle's reports.
+- The harness's reports.
 - This repository and its dependencies.
 - Public references, like published descriptions of Turbo Pascal's random number generator and its 6-byte `Real` format.
 - The data files from the player's copy of the game, like the DAX archives.
 
-Never read `~/repos/goldbox`, the `gold-box-oracle` repository, disassembly or decompiled code of any Gold Box game, or the games' program files (the `.EXE`, `.COM`, `.OVR`, and `.DRV` files), and don't run the original game. When the specification doesn't answer a question, file the question in `gold-box-spec`.
+Never read `~/repos/goldbox`, the `gold-box-harness` repository, disassembly or decompiled code of any Gold Box game, or the games' program files (the `.EXE`, `.COM`, `.OVR`, and `.DRV` files), and don't run the original game. When the specification doesn't answer a question, file the question in `gold-box-spec`.
 
 ## Writing
 
-Before you write or edit any prose in this repository, load the `plain-prose` skill and follow it. Prose means Markdown docs, the README, Rust doc comments, code comments, commit messages, and PR descriptions. In Claude Code, invoke the skill. In another harness, read `.claude/skills/plain-prose/SKILL.md` and the files it points to.
+Before you write or edit any prose in this repository, load the `plain-prose` skill and follow it. Prose means Markdown docs, the README, Rust doc comments, code comments, commit messages, and PR descriptions. In Claude Code, invoke the skill. In another agent harness, read `.claude/skills/plain-prose/SKILL.md` and the files it points to.
 
 ## Game data
 
